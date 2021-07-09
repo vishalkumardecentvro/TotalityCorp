@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="10dp"
+  tools:context=".MainActivity">
+
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/mcvSelfie"
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:layout_margin="5dp"
+      android:layout_weight="1"
+      app:cardBackgroundColor="@color/black"
+      app:cardCornerRadius="50dp">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Take selfie"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+      android:id="@+id/mcvUpload"
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:layout_margin="5dp"
+      android:layout_weight="1"
+      app:cardBackgroundColor="@color/teal_200"
+      app:cardCornerRadius="50dp">
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Upload from gallery"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+  </LinearLayout>
+
+  <ImageView
+    android:id="@+id/ivPreview"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:layout_marginBottom="10dp" />
+
+  <FrameLayout
+    android:id="@+id/flPreviewContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <androidx.camera.view.PreviewView
+      android:id="@+id/pvImagePreview"
+      android:layout_width="match_parent"
+      android:layout_height="200dp" />
+  </FrameLayout>
+
+
+</LinearLayout>
